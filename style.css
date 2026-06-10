@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f8fcf8;
+  --text: #1f3a1f;
+  --primary: #2e8b57;
+  --card: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg: #0a140a;
+  --text: #d0e8d0;
+  --primary: #4ade80;
+  --card: #162b16;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+              url('https://source.unsplash.com/random/1600x900/?brazilian,farm,landscape') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.section {
+  padding: 5rem 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 1.2rem 1.5rem 0.5rem;
+  color: var(--primary);
+}
+
+.card p {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.weather {
+  background: var(--card);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.temp {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.quiz {
+  background: var(--card);
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.option {
+  padding: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option:hover { background: #f0f9f4; }
+.option.correct { background: #d4edda; border-color: #2e8b57; }
+.option.wrong { background: #f8d7da; border-color: #dc3545; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 14px 34px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--primary);
+  color: white;
+}
